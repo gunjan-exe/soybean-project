@@ -67,7 +67,7 @@ const Auth = () => {
   return (
     <div className="auth-container">
       <div className="auth-left">
-        <h1 className="auth-title">FARMAID</h1>
+        <h1 className="auth-title">FARM<span className="highlight">AID</span></h1>
         <p className="auth-tagline">From Diagnosis To Recovery</p>
       </div>
 

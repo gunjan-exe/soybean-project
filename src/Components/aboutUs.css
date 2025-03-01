@@ -1,47 +1,92 @@
 .about-us {
     font-family: "Arial", sans-serif;
     color: #333;
+    padding-top: 60px; /* Account for fixed header */
   }
   
   .about-header {
     text-align: center;
-    padding: 40px 20px;
-    background-color: #f5fff0;
+    padding: 60px 20px;
+    background-color: #ffffff;
   }
   
   .about-header h1 {
-    color: #64c132;
-    font-size: 2.5rem;
+    color: #337805;
+    font-size: 2.8rem;
+    margin: 0;
+    line-height: 1.2;
+    font-weight: bold;
   }
   
   .about-header p {
-    max-width: 700px;
-    margin: 10px auto;
+    max-width: 800px;
+    margin: 30px auto 0;
     font-size: 1.2rem;
+    line-height: 1.6;
+    color: #666;
   }
   
   .features {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    align-items: center;
+    gap: 80px;
     padding: 40px 20px;
-    background-color: #ffffff;
+    background-color: #f9f9f9;
   }
   
   .feature {
     text-align: center;
-    max-width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
   
-  .feature img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
+  .feature-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #337805;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: white; /* For FontAwesome icons */
+    font-size: 2rem; /* For FontAwesome icons */
   }
   
   .feature p {
-    font-weight: bold;
-    color: #64c132;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #337805;
+    margin: 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-header h1 {
+      font-size: 2rem;
+    }
+  
+    .about-header p {
+      font-size: 1rem;
+      padding: 0 20px;
+    }
+  
+    .features {
+      flex-direction: column;
+      gap: 40px;
+    }
+  
+    .feature-icon {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .feature p {
+      font-size: 1rem;
+    }
   }
   
   .video-section {
@@ -100,5 +145,194 @@
   
   .contact h3 {
     margin-bottom: 10px;
+  }
+  
+  .main-content {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .additional-content {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+  }
+  
+  .video-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .benefits-section {
+    max-width: 1000px;
+    margin: 60px auto 0;
+    padding: 0 20px;
+  }
+  
+  .benefits-section h2 {
+    color: #337805;
+    font-size: 2.4rem;
+    margin-bottom: 30px;
+  }
+  
+  .benefits-intro {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 30px;
+  }
+  
+  .benefits-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .benefits-list li {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 15px;
+    padding-left: 24px;
+    position: relative;
+  }
+  
+  .benefits-list li:before {
+    content: "•";
+    color: #337805;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -2px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .additional-content {
+      padding: 40px 0;
+    }
+  
+    .benefits-section h2 {
+      font-size: 2rem;
+    }
+  
+    .benefits-intro,
+    .benefits-list li {
+      font-size: 1rem;
+    }
+  }
+  
+  .info-section {
+    background-color: #ffffff;
+    padding: 60px 0;
+  }
+  
+  .info-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .info-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .benefits-list, .features-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+  }
+  
+  .benefits-list li, .features-list li {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 15px;
+    padding-left: 24px;
+    position: relative;
+  }
+  
+  .benefits-list li:before, .features-list li:before {
+    content: "•";
+    color: #337805;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -2px;
+  }
+  
+  .farmaid-features {
+    margin: 40px 0;
+  }
+  
+  .farmaid-features h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .highlight {
+    color: #90FF17;
+    font-weight: bold;
+  }
+  
+  .conclusion-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-top: 30px;
+  }
+  
+  .contact-footer {
+    background-color: #4F4F4F;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .footer-content p {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .info-section {
+      padding: 40px 0;
+    }
+  
+    .info-text, 
+    .benefits-list li, 
+    .features-list li,
+    .conclusion-text {
+      font-size: 1rem;
+    }
+  
+    .farmaid-features h3 {
+      font-size: 1.2rem;
+    }
+  
+    .footer-content h2 {
+      font-size: 1.8rem;
+    }
+  
+    .footer-content p {
+      font-size: 1.1rem;
+    }
   }
   

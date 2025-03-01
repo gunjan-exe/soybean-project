@@ -1,0 +1,147 @@
+.scan-container {
+  min-height: calc(100vh - 60px);
+  margin-top: 60px;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+              url('https://images.unsplash.com/photo-1574943320219-553eb213f72d?q=80&w=2942&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+}
+
+.scan-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.scan-content h1 {
+  color: #337805;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.scan-content p {
+  color: #666;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.upload-area {
+  border: 3px dashed #337805;
+  border-radius: 20px;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+.upload-area.dragging {
+  background-color: rgba(51, 120, 5, 0.1);
+  border-color: #90FF17;
+}
+
+.upload-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.upload-btn, .camera-btn {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #337805;
+  color: white;
+  width: 200px;
+}
+
+.upload-btn:hover, .camera-btn:hover {
+  background-color: #2a6404;
+  transform: translateY(-2px);
+}
+
+.camera-container {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  background-color: #000;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.camera-preview {
+  width: 100%;
+  height: auto;
+}
+
+.camera-controls {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.preview-container {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.image-preview {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.preview-controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.preview-controls button {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.preview-controls button:first-child {
+  background-color: #ff4444;
+  color: white;
+}
+
+.analyze-btn {
+  background-color: #337805;
+  color: white;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .scan-content h1 {
+    font-size: 2rem;
+  }
+
+  .scan-content p {
+    font-size: 1rem;
+  }
+
+  .upload-area {
+    padding: 20px;
+  }
+
+  .upload-btn, .camera-btn {
+    width: 160px;
+    font-size: 1rem;
+  }
+} 

@@ -1,45 +1,74 @@
 /* Container */
 .auth-container {
     display: flex;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
     align-items: center;
     justify-content: space-between;
-    height: 100vh;
+    min-height: calc(100vh - 80px);
+    position: relative;  /* Added for pseudo-element positioning */
     background: url('https://png.pngtree.com/thumb_back/fw800/background/20231229/pngtree-exotic-leafy-patterns-an-abstract-texture-background-with-a-tropical-vibe-image_13857259.png') no-repeat center center;
     background-size: cover;
-  }
-  
-  /* Left Section */
-  .auth-left {
+    padding: 2rem;
+}
+
+/* Dark overlay */
+.auth-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);  /* Adjust opacity as needed */
+    z-index: 1;
+}
+
+/* Ensure content stays above overlay */
+.auth-left, .auth-right {
+    position: relative;
+    z-index: 2;
+}
+
+/* Left Section */
+.auth-left {
     flex: 1;
     text-align: left;
     padding-right: 2rem;
-  }
-  
-  .auth-title {
-    font-size: 3rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.auth-title {
+    font-size: 4rem;
     font-weight: bold;
     color: #ffffff;
     margin: 0;
-  }
-  
-  .auth-tagline {
-    font-size: 1.2rem;
+    
+}
+
+.auth-title .highlight {
+    color: #FFD700; /* Yellow color for "AID" */
+}
+
+.auth-tagline {
+    font-size: 2.2rem;
     font-weight: 300;
     color: #ffffff;
-    margin-top: 1rem;
-  }
-  
-  /* Right Section */
-  .auth-right {
+    margin-top: 0.5rem;
+}
+
+/* Right Section */
+.auth-right {
     flex: 1;
     display: flex;
     justify-content: center;
-  }
-  
-  .auth-card {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.auth-card {
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
     border-radius: 20px;
@@ -48,35 +77,36 @@
     padding: 2rem;
     width: 100%;
     max-width: 400px;
-  }
-  
-  /* Toggle Tabs */
-  .auth-toggle {
+}
+
+/* Toggle Tabs */
+.auth-toggle {
     display: flex;
     justify-content: space-around;
     margin-bottom: 1.5rem;
-  }
-  
-  .auth-toggle span {
+    color: #ffffff;
+}
+
+.auth-toggle span {
     cursor: pointer;
     font-size: 1.2rem;
     padding: 0.5rem 1rem;
     border-radius: 10px;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  }
-  
-  .auth-toggle span.active {
+}
+
+.auth-toggle span.active {
     background-color: #4caf50;
     color: #fff;
-  }
-  
-  .auth-toggle span:hover {
+}
+
+.auth-toggle span:hover {
     background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  /* Form Styles */
-  .auth-form .auth-input {
-    width: 100%;
+}
+
+/* Form Styles */
+.auth-form .auth-input {
+    width: 94%;
     padding: 0.8rem;
     margin-bottom: 1rem;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -84,13 +114,13 @@
     background: rgba(255, 255, 255, 0.2);
     color: #fff;
     font-size: 1rem;
-  }
-  
-  .auth-form .auth-input::placeholder {
+}
+
+.auth-form .auth-input::placeholder {
     color: rgba(255, 255, 255, 0.8);
-  }
-  
-  .auth-form .auth-button {
+}
+
+.auth-form .auth-button {
     width: 100%;
     padding: 0.8rem;
     background-color: #4caf50;
@@ -101,56 +131,58 @@
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
-  }
-  
-  .auth-form .auth-button:hover {
+}
+
+.auth-form .auth-button:hover {
     background-color: #388e3c;
-  }
-  
-  /* Responsiveness */
-  @media (max-width: 768px) {
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
     .auth-container {
-      flex-direction: column;
-      text-align: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+        min-height: calc(100vh - 60px);
     }
-  
+
     .auth-left {
-      padding-right: 0;
-      margin-bottom: 2rem;
+        padding-right: 0;
+        margin-bottom: 2rem;
     }
-  
+
     .auth-title {
-      font-size: 2rem;
+        font-size: 2rem;
     }
-  
+
     .auth-tagline {
-      font-size: 1rem;
+        font-size: 1rem;
     }
-  
+
     .auth-card {
-      width: 90%;
+        width: 90%;
     }
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
     .auth-title {
-      font-size: 1.5rem;
+        font-size: 1.5rem;
     }
-  
+
     .auth-tagline {
-      font-size: 0.9rem;
+        font-size: 0.9rem;
     }
-  
+
     .auth-toggle span {
-      font-size: 1rem;
+        font-size: 1rem;
     }
-  
+
     .auth-form .auth-input {
-      font-size: 0.9rem;
+        font-size: 0.9rem;
     }
-  
+
     .auth-form .auth-button {
-      font-size: 1rem;
+        font-size: 1rem;
     }
-  }
+}
   
